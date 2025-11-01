@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trader Ranker - Rank Your Trading Performance</title>
-    <meta name="description" content="Join Trader Ranker - Connect your wallet and track your trading performance on Solana">
+    <title>TraderRanker - Find Out Which Telegram Callers Actually Win</title>
+    <meta name="description" content="TraderRanker analyzes every crypto call made by top Telegram KOLs — ranking them by real ROI, accuracy, and consistency. Cut through the noise and follow data, not hype.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="stars"></div>
+    <div class="grid-bg"></div>
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
             <nav class="navbar">
                 <div class="logo">
-                    <h1>⚡ Trader Ranker</h1>
+                    <div class="logo-icon">📊</div>
+                    <h1>TraderRanker</h1>
                 </div>
-                <button id="walletButton" class="wallet-btn">
-                    <span class="wallet-icon">👻</span>
-                    <span id="walletText">Connect Phantom</span>
-                </button>
+                <div class="nav-actions">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#rankings" class="nav-link">Rankings</a>
+                    <button id="walletButton" class="wallet-btn">
+                        <span class="wallet-icon">👻</span>
+                        <span id="walletText">Connect Wallet</span>
+                    </button>
+                </div>
             </nav>
 
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Beta Access Now Open
+                </div>
+
                 <h2 class="hero-title">
-                    Rank Your Trading
-                    <span class="gradient-text">Performance</span>
+                    Find Out Which Telegram Callers
+                    <span class="gradient-text">Actually Win</span>
                 </h2>
+
                 <p class="hero-subtitle">
-                    Connect your Solana wallet and compete with traders worldwide.
-                    Track, analyze, and dominate the leaderboard.
+                    TraderRanker analyzes every crypto call made by top Telegram KOLs —
+                    ranking them by <strong>real ROI, accuracy, and consistency</strong>.
+                    Cut through the noise and follow data, not hype.
                 </p>
 
                 <!-- Email Signup Form -->
@@ -39,18 +51,18 @@
                             <input
                                 type="email"
                                 id="emailInput"
-                                placeholder="Enter your email"
+                                placeholder="Enter your email for beta access"
                                 required
                                 class="email-input"
                             >
                             <button type="submit" class="submit-btn">
-                                Join Waitlist
+                                Join Beta Waitlist
                             </button>
                         </div>
                         <p class="form-message" id="formMessage"></p>
                     </form>
                     <p class="signup-note">
-                        🔒 Early access to premium features
+                        Be first to access transparent trading analytics. No spam, unsubscribe anytime.
                     </p>
                 </div>
 
@@ -68,57 +80,307 @@
             </div>
         </header>
 
-        <!-- Features Section -->
-        <section class="features">
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Track Performance</h3>
-                    <p>Real-time analytics of your trading history and performance metrics</p>
+        <!-- Live Stats Bar -->
+        <section class="live-stats">
+            <div class="stats-bar">
+                <div class="stat-item-inline">
+                    <span class="stat-label-inline">KOLs Tracked</span>
+                    <span class="stat-value-inline">50+</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Compete & Rank</h3>
-                    <p>Climb the leaderboard and prove your trading prowess</p>
+                <div class="stat-divider"></div>
+                <div class="stat-item-inline">
+                    <span class="stat-label-inline">Calls Analyzed</span>
+                    <span class="stat-value-inline">2,400+</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>Secure & Private</h3>
-                    <p>Your wallet, your data. We never ask for private keys</p>
+                <div class="stat-divider"></div>
+                <div class="stat-item-inline">
+                    <span class="stat-label-inline">Avg Win Rate</span>
+                    <span class="stat-value-inline">34%</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Solana Speed</h3>
-                    <p>Built on Solana for lightning-fast transactions</p>
+                <div class="stat-divider"></div>
+                <div class="stat-item-inline">
+                    <span class="stat-label-inline">Top Caller ROI</span>
+                    <span class="stat-value-inline success">+284%</span>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">1,000+</div>
-                    <div class="stat-label">Active Traders</div>
+        <!-- How It Works Section -->
+        <section id="features" class="section how-it-works">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Data-driven transparency for crypto calling culture</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">🔍</div>
+                    <h3>Track & Monitor</h3>
+                    <p>We scan Telegram channels 24/7, capturing every trading call from verified KOLs in real-time</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">$10M+</div>
-                    <div class="stat-label">Volume Tracked</div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">⛓️</div>
+                    <h3>Verify On-Chain</h3>
+                    <p>Cross-reference calls with actual on-chain data to verify trades, entries, exits, and results</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Live Updates</div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">📈</div>
+                    <h3>Analyze Performance</h3>
+                    <p>Calculate ROI, win rates, risk metrics, and consistency across all calls and timeframes</p>
                 </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">🏆</div>
+                    <h3>Rank & Display</h3>
+                    <p>Live leaderboards show who's truly profitable — sorted by data, not followers or hype</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="section features-detailed">
+            <div class="section-header">
+                <h2 class="section-title">Key Features</h2>
+                <p class="section-subtitle">Everything you need to separate signal from noise</p>
+            </div>
+
+            <div class="features-grid-large">
+                <div class="feature-card-large">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">📊</div>
+                        <div>
+                            <h3>Real-Time KOL Performance Analytics</h3>
+                            <span class="feature-status live">Live</span>
+                        </div>
+                    </div>
+                    <p>Track every caller's performance with detailed metrics: ROI, win rate, average gain/loss, sharpe ratio, and drawdown analysis. Filter by timeframe, token, or strategy type.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Live Data</span>
+                        <span class="tag">Historical Analysis</span>
+                        <span class="tag">Multi-Timeframe</span>
+                    </div>
+                </div>
+
+                <div class="feature-card-large">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">🏆</div>
+                        <div>
+                            <h3>Leaderboard Rankings</h3>
+                            <span class="feature-status live">Live</span>
+                        </div>
+                    </div>
+                    <p>Public leaderboards ranking callers by ROI, consistency, and total profit. See who's winning this week, this month, or all-time. Token-specific rankings reveal niche specialists.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Real Rankings</span>
+                        <span class="tag">Verified Results</span>
+                        <span class="tag">No Gaming</span>
+                    </div>
+                </div>
+
+                <div class="feature-card-large">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">🧪</div>
+                        <div>
+                            <h3>Strategy Backtesting</h3>
+                            <span class="feature-status coming">Coming Soon</span>
+                        </div>
+                    </div>
+                    <p>Test your own strategies using historical market data and KOL signals. Simulate different entry/exit rules, position sizing, and risk management approaches.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Backtesting</span>
+                        <span class="tag">Strategy Builder</span>
+                        <span class="tag">Risk Analysis</span>
+                    </div>
+                </div>
+
+                <div class="feature-card-large">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">🔄</div>
+                        <div>
+                            <h3>Copytrading Integration</h3>
+                            <span class="feature-status coming">Coming Soon</span>
+                        </div>
+                    </div>
+                    <p>Automatically mirror trades from top-ranked callers directly from your wallet. Set allocation limits, stop-losses, and filter by token or strategy.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Auto-Execute</span>
+                        <span class="tag">Risk Controls</span>
+                        <span class="tag">Non-Custodial</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why It Matters Section -->
+        <section id="rankings" class="section why-matters">
+            <div class="content-box">
+                <div class="content-split">
+                    <div class="content-left">
+                        <div class="eyebrow">Why It Matters</div>
+                        <h2 class="content-title">Transparency in a Noisy Market</h2>
+                        <p class="content-text">
+                            The crypto calling space is full of hype, cherry-picked wins, and deleted losses.
+                            Telegram KOLs post screenshots of 10x gains while conveniently forgetting their rugs.
+                        </p>
+                        <p class="content-text">
+                            <strong>TraderRanker changes that.</strong> Every call is tracked. Every result is verified.
+                            No more trusting screenshots — see the full picture with on-chain proof.
+                        </p>
+                        <div class="content-stats">
+                            <div class="mini-stat">
+                                <div class="mini-stat-value">67%</div>
+                                <div class="mini-stat-label">Of KOLs underperform buy-and-hold</div>
+                            </div>
+                            <div class="mini-stat">
+                                <div class="mini-stat-value">23%</div>
+                                <div class="mini-stat-label">Average win rate across all callers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="ranking-preview">
+                            <div class="preview-header">
+                                <span>Top Performers (30d)</span>
+                                <span class="preview-live">🟢 Live</span>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-badge gold">1</div>
+                                <div class="rank-info">
+                                    <div class="rank-name">SolanaAlpha</div>
+                                    <div class="rank-metrics">12 calls • 75% win rate</div>
+                                </div>
+                                <div class="rank-roi positive">+142%</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-badge silver">2</div>
+                                <div class="rank-info">
+                                    <div class="rank-name">CryptoWhale99</div>
+                                    <div class="rank-metrics">24 calls • 58% win rate</div>
+                                </div>
+                                <div class="rank-roi positive">+89%</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-badge bronze">3</div>
+                                <div class="rank-info">
+                                    <div class="rank-name">DeFiGuru</div>
+                                    <div class="rank-metrics">18 calls • 61% win rate</div>
+                                </div>
+                                <div class="rank-roi positive">+67%</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-badge">4</div>
+                                <div class="rank-info">
+                                    <div class="rank-name">TokenHunter</div>
+                                    <div class="rank-metrics">31 calls • 45% win rate</div>
+                                </div>
+                                <div class="rank-roi positive">+34%</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-badge">5</div>
+                                <div class="rank-info">
+                                    <div class="rank-name">MemeKing420</div>
+                                    <div class="rank-metrics">47 calls • 38% win rate</div>
+                                </div>
+                                <div class="rank-roi negative">-12%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Vision Section -->
+        <section class="section future-vision">
+            <div class="section-header">
+                <div class="eyebrow">Roadmap</div>
+                <h2 class="section-title">The Future of TraderRanker</h2>
+            </div>
+
+            <div class="roadmap-grid">
+                <div class="roadmap-card">
+                    <div class="roadmap-quarter">Q2 2025</div>
+                    <h3>Multi-Chain Expansion</h3>
+                    <p>Expand tracking to Ethereum, Base, and Arbitrum. Cross-chain caller rankings and unified analytics.</p>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-quarter">Q3 2025</div>
+                    <h3>AI-Powered Insights</h3>
+                    <p>Machine learning models to predict caller performance, identify pattern shifts, and flag suspicious behavior.</p>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-quarter">Q4 2025</div>
+                    <h3>Social Trading Platform</h3>
+                    <p>Full social layer with verified trader profiles, strategy sharing, and community-driven analytics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="section cta-section">
+            <div class="cta-box">
+                <h2 class="cta-title">Ready to See the Truth?</h2>
+                <p class="cta-subtitle">
+                    Join the waitlist and be first to access transparent trading analytics.
+                    Stop following hype. Start following data.
+                </p>
+                <form id="emailFormBottom" class="email-form">
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            id="emailInputBottom"
+                            placeholder="Enter your email"
+                            required
+                            class="email-input"
+                        >
+                        <button type="submit" class="submit-btn">
+                            Get Beta Access
+                        </button>
+                    </div>
+                    <p class="form-message" id="formMessageBottom"></p>
+                </form>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2025 Trader Ranker. Built on Solana.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Discord</a>
-                <a href="#" class="social-link">Docs</a>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="logo-icon">📊</div>
+                        <span>TraderRanker</span>
+                    </div>
+                    <p class="footer-tagline">Data-driven transparency for crypto traders</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#rankings">Rankings</a>
+                        <a href="#roadmap">Roadmap</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Telegram</a>
+                        <a href="#" target="_blank">Discord</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#">Docs</a>
+                        <a href="#">API</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TraderRanker. Built on Solana.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
             </div>
         </footer>
     </div>
