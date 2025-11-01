@@ -1,0 +1,430 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #9945FF;
+    --secondary: #14F195;
+    --accent: #00D4FF;
+    --dark: #0a0a0a;
+    --dark-light: #1a1a1a;
+    --dark-lighter: #2a2a2a;
+    --text: #ffffff;
+    --text-dim: #a0a0a0;
+    --gradient: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
+    --gradient-alt: linear-gradient(135deg, #00D4FF 0%, #9945FF 100%);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Animated Background Stars */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 60px 70px, #fff, transparent),
+        radial-gradient(1px 1px at 50px 50px, #ddd, transparent),
+        radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+        radial-gradient(2px 2px at 90px 10px, #eee, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 3s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.5; }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.wallet-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gradient);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(153, 69, 255, 0.4);
+}
+
+.wallet-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(153, 69, 255, 0.6);
+}
+
+.wallet-btn.connected {
+    background: var(--dark-lighter);
+    border: 2px solid var(--secondary);
+}
+
+.wallet-icon {
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 0 120px;
+}
+
+.hero-content {
+    margin-top: 80px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-dim);
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+/* Email Signup Form */
+.signup-section {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.email-form {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 18px 24px;
+    background: var(--dark-lighter);
+    border: 2px solid var(--dark-lighter);
+    border-radius: 50px;
+    color: var(--text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--dark-light);
+}
+
+.submit-btn {
+    padding: 18px 40px;
+    background: var(--gradient-alt);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 212, 255, 0.6);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    min-height: 20px;
+}
+
+.form-message.success {
+    color: var(--secondary);
+}
+
+.form-message.error {
+    color: #ff4444;
+}
+
+.signup-note {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+/* Wallet Status */
+.wallet-status {
+    max-width: 600px;
+    margin: 30px auto;
+    animation: slideIn 0.3s ease;
+}
+
+.wallet-status.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--dark-lighter);
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    padding: 20px 25px;
+}
+
+.status-icon {
+    font-size: 2rem;
+}
+
+.status-info {
+    flex: 1;
+}
+
+.status-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+}
+
+.status-address {
+    font-family: 'Courier New', monospace;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.disconnect-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--dark-lighter);
+    border-radius: 50px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.disconnect-btn:hover {
+    border-color: #ff4444;
+    color: #ff4444;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--dark-lighter);
+    border: 1px solid var(--dark-lighter);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(153, 69, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-dim);
+    line-height: 1.7;
+}
+
+/* Stats Section */
+.stats {
+    padding: 60px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    border-top: 1px solid var(--dark-lighter);
+    margin-top: 80px;
+}
+
+.footer p {
+    color: var(--text-dim);
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-link {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .status-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading Animation */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.6s linear infinite;
+}
