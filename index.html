@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Ranker - Rank Your Trading Performance</title>
+    <meta name="description" content="Join Trader Ranker - Connect your wallet and track your trading performance on Solana">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>⚡ Trader Ranker</h1>
+                </div>
+                <button id="walletButton" class="wallet-btn">
+                    <span class="wallet-icon">👻</span>
+                    <span id="walletText">Connect Phantom</span>
+                </button>
+            </nav>
+
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    Rank Your Trading
+                    <span class="gradient-text">Performance</span>
+                </h2>
+                <p class="hero-subtitle">
+                    Connect your Solana wallet and compete with traders worldwide.
+                    Track, analyze, and dominate the leaderboard.
+                </p>
+
+                <!-- Email Signup Form -->
+                <div class="signup-section">
+                    <form id="emailForm" class="email-form">
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                id="emailInput"
+                                placeholder="Enter your email"
+                                required
+                                class="email-input"
+                            >
+                            <button type="submit" class="submit-btn">
+                                Join Waitlist
+                            </button>
+                        </div>
+                        <p class="form-message" id="formMessage"></p>
+                    </form>
+                    <p class="signup-note">
+                        🔒 Early access to premium features
+                    </p>
+                </div>
+
+                <!-- Wallet Status -->
+                <div id="walletStatus" class="wallet-status hidden">
+                    <div class="status-card">
+                        <div class="status-icon">✅</div>
+                        <div class="status-info">
+                            <p class="status-label">Connected Wallet</p>
+                            <p class="status-address" id="walletAddress"></p>
+                        </div>
+                        <button id="disconnectBtn" class="disconnect-btn">Disconnect</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Performance</h3>
+                    <p>Real-time analytics of your trading history and performance metrics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Compete & Rank</h3>
+                    <p>Climb the leaderboard and prove your trading prowess</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure & Private</h3>
+                    <p>Your wallet, your data. We never ask for private keys</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Solana Speed</h3>
+                    <p>Built on Solana for lightning-fast transactions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,000+</div>
+                    <div class="stat-label">Active Traders</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$10M+</div>
+                    <div class="stat-label">Volume Tracked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Live Updates</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Trader Ranker. Built on Solana.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Discord</a>
+                <a href="#" class="social-link">Docs</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
