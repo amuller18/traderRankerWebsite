@@ -18,7 +18,7 @@ const EMAIL_CONFIG = {
     // Option 2: Mailchimp - FREE TIER: 500 contacts, 1000 emails/month
     // Get API key from: https://mailchimp.com/help/about-api-keys/
     mailchimp: {
-        apiKey: 'YOUR_MAILCHIMP_API_KEY_HERE',
+        apiKey: secrets.BREVO_API_KEY,
         audienceId: 'YOUR_AUDIENCE_ID_HERE',
         datacenter: 'us1',  // Found in your API key (e.g., 'us1', 'us19')
         endpoint: 'https://YOUR_DC.api.mailchimp.com/3.0/lists/YOUR_AUDIENCE_ID/members'
